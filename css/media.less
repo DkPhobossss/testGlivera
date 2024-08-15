@@ -1,0 +1,244 @@
+@media (max-width: 1024px) {
+    html {
+        font-size: 8px;
+    }
+
+    .container {
+        margin-left: 260px;
+        margin-right: 24px;
+    }
+
+    .header {
+        &__nav {
+            padding: 36px 10px 76px 10px;
+
+            & .nav {}
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: 6px;
+    }
+
+    .label-default {
+        min-width: 40px;
+    }
+
+    .container {
+        margin-left: 158px;
+        margin-right: 10px;
+
+        .container__greetings {
+            margin-bottom: 20px;
+        }
+    }
+
+    .header {
+        &__nav {
+            padding: 36px 10px 76px 10px;
+
+            & .nav {
+                &__title-block {
+                    font-size: 2rem;
+                }
+
+                &__version {
+                    margin-right: 0;
+                }
+
+                &__dashboard {}
+
+                &__link {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+        padding: 10px 5px 10px 10px;
+
+        .customers {
+            &__data {
+                .table {
+                    &__header {
+                        .table__item {
+                            &:first-child {
+                                width: 110px;
+                            }
+
+                            &:nth-child(2) {
+                                width: 110px;
+                            }
+
+                            &:nth-child(3) {
+                                width: 110px;
+                            }
+
+                            &:nth-child(4) {
+                                width: 110px;
+                            }
+
+                            &:nth-child(5) {
+                                width: 110px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__pagination {
+                & .pagination {
+                    &__item+.pagination__item {
+                        margin-left: 6px;
+                    }
+
+                    &__item-more {
+                        margin: 0 6px;
+                    }
+
+                    &__link {
+                        padding: 3px 2px;
+                        min-width: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 320px) {
+
+    html {
+        font-size: 4px;
+    }
+
+    .container {
+        margin-left: 45px;
+        margin-right: 5px;
+    }
+
+    .label-default {
+        min-width: 30px;
+        border-radius: 2px;
+    }
+
+    .input {
+        padding: 4px;
+        border-radius: 4px;
+    }
+
+    .header {
+        &__nav {
+            padding: 2px;
+            align-items: center;
+
+            & .nav {
+                &__title-block {
+
+                    margin-bottom: 10px;
+                }
+
+                &__logo {
+                    margin-right: 0;
+                }
+
+                &__version {
+                    display: none;
+                }
+
+                &__dashboard {
+                    display: none;
+                }
+
+                &__link {
+                    font-size: 0;
+                    padding: 2px;
+
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                &__item {
+                    margin-bottom: 2px;
+                }
+
+                &__img {
+                    margin-right: 0;
+                }
+
+                &__user {
+                    .user {
+
+                        &__avatar {
+                            width: 32px;
+                            height: 32px;
+                            margin-right: 0;
+                        }
+
+                        &__data {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+        border-radius: 10px;
+
+        .customers {
+            &__title {
+                font-size: 1.8rem;
+            }
+
+            &__form {
+                min-width: 120px;
+            }
+
+            &__search-input {
+                padding-left: 20px;
+                background-position: 4px 50%;
+                width: 100%;
+                background-size: 10px 10px;
+            }
+
+            &__data {
+                .table {
+
+                    &__item {
+                        padding-left: 2px;
+                        padding-right: 2px;
+                    }
+
+                }
+            }
+
+            &__pagination {
+                & .pagination {
+                    &__item+.pagination__item {
+                        margin-left: 2px;
+                    }
+
+                    &__item-more {
+                        margin: 0 2px;
+                    }
+
+                    &__link {
+                        padding: 3px 2px;
+                        min-width: 12px;
+                        border-radius: 2px;
+                    }
+                }
+            }
+        }
+    }
+}

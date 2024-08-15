@@ -1,0 +1,389 @@
+@colorTextMain : #000000;
+@colorTextSecondary: #B5B7C0;
+@colorActiveBorder: #00B087;
+@colorActiveBG: #A6E7D8;
+@colorActiveText: #008767;
+@colorInactiveBorder: #DF0404;
+@colorInactiveBG: #FFC5C5;
+@colorInactiveText: @colorInactiveBorder;
+@colorInputBG : #F9FBFF;
+
+@colorButtonBG: #eeeeee;
+@colorTableSeparator: #eeeeee;
+@colorButtonHover: #5932EA;
+@colorButtonActive: #7952FA;
+@colorButtonTextHover: #ffffff;
+@colorButtonText: #404B52;
+@colorButtonTextMenu: #9197B3;
+
+@colorLightBG : #ffffff;
+@colorMainBG : #FAFBFF;
+
+@indentMain: 20px;
+@indentElements: 12px;
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.fontWeightRegular {
+    font-weight: 400;
+}
+
+.fontWeightMedium {
+    font-weight: 500;
+}
+
+.fontWeightSemiBold {
+    font-weight: 600;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+
+img {
+    vertical-align: middle;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    .fontWeightMedium();
+    background-color: @colorMainBG;
+    line-height: 1.5;
+    font-size: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-top: 41px;
+    max-width: 968px;
+    margin: 0 73px 0 376px;
+
+    &__greetings {
+        font-size: 2.4rem;
+        margin-bottom: 62px;
+    }
+}
+
+.header {
+    &__nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background-color: @colorLightBG;
+        padding: 36px 28px 76px 28px;
+        .flexColumn();
+
+        & .nav {
+
+            &__title-block {
+                margin-bottom: 53px;
+                .flexRow();
+                align-items: center;
+                font-size: 2.6rem;
+                .fontWeightSemiBold();
+            }
+
+            &__logo {
+                margin-right: 8px;
+            }
+
+            &__version {
+                margin-left: 4px;
+                font-size: 1rem;
+                color: #838383;
+                align-self: flex-end;
+                line-height: 30px;
+                margin-right: 35px;
+            }
+
+            &__list {
+                .flexColumn();
+            }
+
+            &__item {
+                margin-bottom: 18px;
+            }
+
+            &__link {
+                .flexRow();
+                color: @colorButtonTextMenu;
+                align-items: center;
+                padding: 11px;
+                border-radius: 8px;
+
+                &:hover,
+                &:not([href]) {
+                    background-color: @colorButtonHover;
+                    color: @colorButtonTextHover;
+                }
+
+                &:active {
+                    background-color: @colorButtonActive;
+                }
+
+                &::after {
+                    content: '>';
+                    margin-left: auto;
+                    font-size: 2rem;
+                    line-height: 100%;
+                }
+            }
+
+            &__img {
+                margin-right: 14px;
+            }
+
+            &__user {
+                .flexRow();
+                align-items: center;
+                margin-top: auto;
+
+                .user {
+                    &__avatar {
+                        width: 42px;
+                        height: 42px;
+                        border-radius: 20px;
+                        margin-right: 12px;
+                    }
+
+                    &__position {
+                        color: #757575;
+                        .fontWeightRegular();
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.input {
+    font-size: 1.2rem;
+    padding: 10px;
+    background-color: @colorInputBG;
+
+    border: none;
+    border-radius: 10px;
+    .fontWeightRegular();
+
+    &::placeholder {
+        color: @colorTextSecondary;
+    }
+
+    &:focus {
+        outline: 1px solid @colorButtonHover;
+    }
+}
+
+a:focus {
+    outline-color: currentColor;
+    outline-width: 1px;
+    outline-offset: 4px;
+}
+
+a,
+.input {
+    transition: color 0.3s ease-out, background-color 0.3s ease-out, outline-color 0.3s ease-out;
+}
+
+
+.label-default {
+    padding: 3px 0;
+    text-align: center;
+    border-radius: 4px;
+    display: inline-block;
+    min-width: 80px;
+}
+
+.label-active {
+    color: @colorActiveText;
+    background-color: @colorActiveBG;
+    border: 1px solid @colorActiveBorder;
+}
+
+.label-inactive {
+    color: @colorInactiveText;
+    background-color: @colorInactiveBG;
+    border: 1px solid @colorInactiveBorder;
+}
+
+
+.main {
+    background-color: @colorLightBG;
+    border-radius: 30px;
+    padding: 19px 40px 51px 38px;
+
+    .customers {
+        &__top-block {
+            .flexRow();
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 34px;
+        }
+
+        &__title {
+            font-size: 2.2rem;
+            .fontWeightSemiBold();
+            margin-bottom: 7px;
+        }
+
+        &__subtitle {
+            color: @colorActiveBG;
+        }
+
+        &__form {
+            margin-right: 10px;
+            min-width: 219px;
+        }
+
+        &__search-input {
+            background-image: url('../img/search.svg');
+            background-repeat: no-repeat;
+            padding-left: 40px;
+            background-position: 8px 50%;
+            width: 100%;
+
+            &:focus {
+                background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="%235932EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 21L16.65 16.65" stroke="%235932EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            }
+        }
+
+        &__data {
+            .table {
+                border-collapse: collapse;
+                width: 100%;
+                margin-bottom: 30px;
+
+                a {
+                    color: @colorTextMain;
+
+                    &:hover {
+                        color: @colorButtonHover;
+                    }
+                }
+
+                &__header {
+                    .table__row {
+                        text-align: left;
+                        color: @colorTextSecondary;
+                    }
+
+                    .table__item {
+                        padding-left: 5px;
+                        .fontWeightMedium();
+                        padding-bottom: @indentMain - 1;
+
+                        &:first-child {
+                            width: 172px;
+                        }
+
+                        &:nth-child(2) {
+                            width: 131px;
+                        }
+
+                        &:nth-child(3) {
+                            width: 156px;
+                        }
+
+                        &:nth-child(4) {
+                            width: 207px;
+                        }
+
+                        &:last-child {
+                            text-align: center;
+                        }
+                    }
+                }
+
+                &__body {
+                    .table__item {
+                        padding-top: @indentMain;
+                        padding-bottom: @indentMain - 1;
+
+                        &:last-child {
+                            text-align: right;
+                            padding-right: 4px;
+                        }
+                    }
+                }
+
+                &__row {
+                    border-bottom: 1px solid @colorTableSeparator;
+                }
+            }
+        }
+
+        &__pagination {
+            .flexRow();
+            align-items: center;
+            justify-content: space-between;
+
+            & .pagination {
+                &__info {
+                    color: @colorTextSecondary;
+                }
+
+                &__list {
+                    .flexRow();
+                    flex-wrap: wrap;
+                }
+
+                &__item {
+                    flex-basis: auto;
+                }
+
+                &__item+.pagination__item {
+                    margin-left: 12px;
+                }
+
+                &__item-more {
+                    margin: 0 12px;
+                }
+
+                &__dots {
+                    cursor: pointer;
+                }
+
+                &__link {
+                    display: inline-block;
+                    font-size: 1.2rem;
+
+                    color: @colorButtonText;
+                    background-color: @colorButtonBG;
+                    border-radius: 4px;
+                    padding: 3px 5px;
+                    min-width: 25px;
+                    text-align: center;
+
+                    &:hover,
+                    &:not([href]) {
+                        color: @colorButtonTextHover;
+                        background-color: @colorButtonHover;
+                    }
+
+                    &:active {
+                        background-color: @colorButtonActive;
+                    }
+                }
+            }
+        }
+    }
+}
