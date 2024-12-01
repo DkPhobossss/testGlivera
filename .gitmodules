@@ -1,0 +1,4 @@
+[submodule "creatium"]
+	path = creatium
+	url = git@github.com:DkPhobossss/creatium-2.git
+	branch = stage
